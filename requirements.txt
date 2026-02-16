@@ -1,0 +1,26 @@
+# --- Core Data & Science ---
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+statsmodels>=0.14.0
+scikit-learn>=1.3.0  # <--- CRITICAL: Needed for BayesianRidge
+
+# --- Bayesian Inference & Uncertainty ---
+# pymc is still here for the Research notebooks
+pymc>=5.0.0
+arviz>=0.15.0
+
+# --- MILP & Optimization ---
+pulp>=2.7.0
+
+# --- Data Ingestion & API ---
+requests>=2.31.0
+yfinance>=0.2.30
+
+# --- Performance & Utilities ---
+tqdm>=4.65.0         # <--- CRITICAL: Needed for progress bars
+python-dotenv>=1.0.0
+
+# --- Visualization ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
