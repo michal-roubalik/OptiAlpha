@@ -47,7 +47,7 @@ We solve a **Mixed-Integer Linear Programming** problem at every rebalance step:
 ### 2. Dynamic Allocation (The "Tunnel" Chart)
 *Visualizing the active management. The optimizer dynamically shifts exposure between Long (Positive) and Short (Negative) based on the Bayesian signal strength.*
 
-![Allocation](reports/figures/allocation_tunnel.png)
+![Allocation](motebooks/reports/figures/allocation_tunnel.png)
 
 ### 3. Rolling Correlation
 *A key metric for Market Neutral strategies. Ideally, this line should oscillate around 0, proving the strategy is providing true diversification.*
