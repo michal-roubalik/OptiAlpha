@@ -65,19 +65,19 @@ We solve a **Mixed-Integer Linear Programming** problem at every rebalance step:
 
 The project is organized into a logical flow, moving from raw data exploration to full-scale production simulation.
 
-### [1. Data Analysis & Regime Detection](notebooks/01_Data_Analysis.ipynb)
+### [1. Data Analysis & Regime Detection](./notebooks/01_Data_Analysis.ipynb)
 * **Goal:** Validate data quality and understand asset characteristics.
 * **Key Actions:** Fetches real-world adjusted close prices via `yfinance`, analyzes return distributions for "fat tails" (kurtosis), and computes correlation matrices to identify natural hedges within the universe.
 
-### [2. Bayesian Modeling (Research)](notebooks/02_Bayesian_Modeling.ipynb)
+### [2. Bayesian Modeling (Research)](./notebooks/02_Bayesian_Modeling.ipynb)
 * **Goal:** Prove the concept of probabilistic signal generation.
 * **Key Actions:** Uses `PyMC` to fit a Bayesian Linear Regression model on synthetic data. It demonstrates **parameter recovery**—proving the model can correctly identify hidden alpha and beta signals even in noisy environments.
 
-### [3. Optimization Engine (Unit Test)](notebooks/03_Optimization_Engine.ipynb)
+### [3. Optimization Engine (Unit Test)](./notebooks/03_Optimization_Engine.ipynb)
 * **Goal:** Verify the Mixed-Integer Linear Programming (MILP) constraints.
 * **Key Actions:** Feeds specific probabilistic scenarios into the `StochasticOptimizer`. It confirms that the solver respects the **Market Neutral** ($\beta \approx 0$), **Dollar Neutral**, and **CVaR (Risk)** constraints before deployment.
 
-### [5. Full Bayesian Backtest (Production)](notebooks/05_Full_Bayesian_Backtest.ipynb)
+### [5. Full Bayesian Backtest (Production)](./notebooks/05_Full_Bayesian_Backtest.ipynb)
 * **Goal:** Execute the rolling-window simulation.
 * **Key Actions:** The "Capstone" notebook. It integrates all components into a walk-forward analysis. The Bayesian model (optimized to `BayesianRidge` for speed) retrains every 20 days to adapt to new market regimes, driving the MILP optimizer to generate the final **Equity Curve** and **Attribution** reports.
 
