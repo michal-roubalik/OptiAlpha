@@ -42,22 +42,22 @@ We solve a **Mixed-Integer Linear Programming** problem at every rebalance step:
 ### 1. Equity Curve: Strategy vs. Benchmark
 *The strategy aims for absolute returns uncorrelated to the S&P 500 (SPY). Note the stability during market drawdowns.*
 
-![Equity Curve](reports/figures/equity_curve.png)
+![Equity Curve](./notebooks/reports/figures/equity_curve.png)
 
 ### 2. Dynamic Allocation (The "Tunnel" Chart)
 *Visualizing the active management. The optimizer dynamically shifts exposure between Long (Positive) and Short (Negative) based on the Bayesian signal strength.*
 
-![Allocation](reports/figures/allocation_tunnel.png)
+![Allocation](./notebooks/reports/figures/allocation_tunnel.png)
 
 ### 3. Rolling Correlation
 *A key metric for Market Neutral strategies. Ideally, this line should oscillate around 0, proving the strategy is providing true diversification.*
 
-![Correlation](reports/figures/rolling_correlation.png)
+![Correlation](./notebooks/reports/figures/rolling_correlation.png)
 
 ### 4. P&L Attribution
 *Breakdown of cumulative profit by asset. This identifies which sectors drove performance and which were hedges.*
 
-![Attribution](reports/figures/pnl_attribution.png)
+![Attribution](./notebooks/reports/figures/pnl_attribution.png)
 
 ---
 
